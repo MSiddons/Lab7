@@ -2,6 +2,7 @@
 #include <vector>
 #include <iomanip>
 #include <string>
+#include <sstream>
 
 using namespace std;
 
@@ -13,22 +14,27 @@ bool isMember(char c, string delim)
 
 string getNext(string const & toExtract, int & pos, string const & delim)
 {
+	string local;
+	stringstream extractStream;
+	extractStream << toExtract;
+	for (int i = pos; i < toExtract.size(); i++)
 
-	return (0);
+	return (local);
 }
 
 
 void exercise1_a()
 {
-	string userIn, skipIn;
-	int posIn;
-	char charIn;
-	cout << "Enter a String: ";
+	string userIn = "Test01010101", skipIn = "0";
+	int posIn = 0;
+	/*cout << "Enter a String: ";
+	cin.clear();
 	getline(cin, userIn);
 	cout << "Starting Position: ";
 	cin >> posIn;
 	cout << "Skipping character: ";
-	getline(cin, skipIn);
+	cin.clear();
+	getline(cin, skipIn);*/
 	cout << "Processed string is: " << getNext(userIn, posIn, skipIn);
 
 }
