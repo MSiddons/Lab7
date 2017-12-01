@@ -20,6 +20,16 @@ string getNext(string const & toExtract, int & pos, string const & delim)
 
 void exercise1_a()
 {
+	string userIn, skipIn;
+	int posIn;
+	char charIn;
+	cout << "Enter a String: ";
+	getline(cin, userIn);
+	cout << "Starting Position: ";
+	cin >> posIn;
+	cout << "Skipping character: ";
+	getline(cin, skipIn);
+	cout << "Processed string is: " << getNext(userIn, posIn, skipIn);
 
 }
 
