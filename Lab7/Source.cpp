@@ -1,13 +1,36 @@
 #include <iostream>
 #include <vector>
 #include <iomanip>
+#include <string>
 
 using namespace std;
 
-//Q1------------------------------------------------------------------------------------------------
+//Q1a------------------------------------------------------------------------------------------------
+bool isMember(char c, string delim) 
+{
+	return (delim.find(c, 0) != string::npos); 
+}
+
+string getNext(string const & toExtract, int & pos, string const & delim)
+{
+
+	return (0);
+}
 
 
-void exercise1()
+void exercise1_a()
+{
+
+}
+
+//Q1b------------------------------------------------------------------------------------------------
+
+void processLine(string const & line)
+{
+
+}
+
+void exercise1_b()
 {
 
 }
@@ -73,8 +96,28 @@ int main()
 		case 0:
 			break;
 		case 1:
-			exercise1();
+		{
+			char q1 = '1';
+			while (q1 != '0')
+			{
+				cout << "Which sub excersise? (a or b, 0 to go back): ";
+				cin >> q1;
+				switch (q1)
+				{
+				case '0':
+					break;
+				case 'a':
+					exercise1_a();
+					break;
+				case 'b':
+					exercise1_b();
+					break;
+				default:
+					cout << "That's not a choice." << endl;
+				}
+			}
 			break;
+		}
 		case 2:
 			exercise2();
 			break;
@@ -101,22 +144,22 @@ int main()
 }
 
 /*
-case 4:
+case 1:
 {
-char q4 = '1';
-while (q4 != '0')
+char q1 = '1';
+while (q1 != '0')
 {
-cout << "Which sub excersise? (a or c, 0 to go back): ";
-cin >> q4;
-switch (q4)
+cout << "Which sub excersise? (a or b, 0 to go back): ";
+cin >> q1;
+switch (q1)
 {
 case '0':
 break;
 case 'a':
-exercise4_a();
+exercise1_a();
 break;
 case 'b':
-exercise4_c();
+exercise1_b();
 break;
 default:
 cout << "That's not a choice." << endl;
